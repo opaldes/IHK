@@ -165,6 +165,7 @@ Somit Rechnet sich die Seite bereits nach 9h Agenturarbeit. Das entspricht 9 Kun
 Angefordert wurde eine neue Website.\\\\
 Diese Websie muss höchste Punktzahl in verschiedenen Tempo Benchmarks bringen, um den Besuche zu zeigen das die zmb modernste Technologien beherrscht.\\\\
 Dabei soll dem Besucher \acs{SSA} entstehen damit der Benutzer wenn er auf der Seite navigiert nicht den \acs{DOM} bei jedem Request neu berechnen muss. 
+Zur Erstellung der SSA soll Angular, da es sich hierbei um eine bereits im Unternehmen etabliertes Framework handelt.\\\\
 Damit Crawler etc unsere Seite vernünftig indexieren können muss die Seite bereits auf dem Server vorgerechnet werden um einen fertigen \acs{DOM} an den Crawler zu senden.
 Der Prototyp soll dem Mockup von S. Gerodetti ähneln, das Mockup ist auf Seite \pageref{tbl:Übersicht der Zeitplanung} einzusehen.\\Für den Anfang wird nur das Hero Image, sowie das Kontaktformular auf der Landingpage benötigt. 
 \section{Entwurfsphase}
@@ -175,30 +176,40 @@ Der Prototyp soll dem Mockup von S. Gerodetti ähneln, das Mockup ist auf Seite 
 \subsection{Pläne}
 \section{Abschlussphase}
 \section{Dokumentation}
-Die Dokumentation besteht aus zwei Teilen einer Projektdokumentation und einer Entwickler Dokumentation.\\\\
+Die Dokumentation besteht aus zwei Teilen einer Projektdokumentation und einer Entwickler Dokumentation.
+\subsubsection{Projektdokumentation}
 Die Projektdokumentation besteht aus einer genauen Beschreibung der für die Ausführung des Projektes benötigten Phasen, sowie Information zur in der Phase benutzten Technologie.
-Die Dokumentation wird mit \LaTeX geschrieben um ein einheitliches Layout zu gewähren.\\\\
-Die Entwicklerdokumentation besteht aus einem automatisch generierten Doku unter Verwendung von Compodoc erstellt, welche alle Informationen aus dem Sourcecode bezieht und diese für Entwickler aufbereitet. Diese Dokumentation ist aus dem Sourcecode für alle Entwickler kompilierbar. Screenshot im Anhang \ref{sec:doku} auf Seite \pageref{sec:doku}.
+Die Dokumentation wird mit \LaTeX geschrieben um ein einheitliches Layout zu gewähren.
+\subsubsection{Projektdokumentation}
+Die Entwicklerdokumentation besteht aus einem automatisch generierten Doku unter Verwendung von Compodoc\footnote{https://compodoc.github.io/compodoc/} erstellt, welche alle Informationen aus dem Sourcecode bezieht und diese für Entwickler aufbereitet. Diese Dokumentation ist aus dem Sourcecode für alle Entwickler kompilierbar. Screenshot im Anhang \ref{sec:doku} auf Seite \pageref{sec:doku}.
 \section{Endstand}
 Das Projekt wurde mit einer funktionstüchtigen Website abgeschlossen. 
 \subsection{Ist/Soll-Zustand}
-Der Ist-Zustand wird mit den Anforderungen(Soll-Zustand) verglichen.
-\subsubsection{Geshwindikeit}
+Der Ist-Zustand wird in den folgenden Abschnitten mit den Anforderungen(Soll-Zustand) verglichen.
+\subsubsection{Geschwindigkeit}
 Die Website soll in gängigen Benchmarks mit höchsten Punktzahlen abschneiden.
-Als Benchmarks wurden Pingdom und Googles PageSpeed Insights verwendet.
+Als Benchmarks wurden Pingdom und PageSpeed Insights verwendet.
 Bei beiden hat die Seite die höchstmögliche Punktzahl.
 Die Berichte für Pingdom sowie PageSpeed Insight sind auf Seite  \pageref{sec:google}/\pageref{sec:pingdom}
 \subsubsection{Layout}
 Das Layout soll dem Mockup entsprechen und responsive sein. 
 Das fertige Layout auf 3 verschiedenen Endgeräten ist auf Seite  %TODO
 zu sehen. Die Navigation in der Kopfzeile fehlt, da es noch keine Navigation auf der Seite gibt.
+Problematisch ist die weiße Überschrift, welche wenn sie die Erde berührt nur schwer zu Lesen ist.
 \subsubsection{SSR}
-Beim Request der Seite sollte eine vorgerechnete Seite ankommen. Wie dem Bild auf Seite %TODO
+Beim Request der Seite sollte eine vorgerechnete Seite ankommen. Wie dem Screenshot auf Seite %TODO
 kommt mit dem vergleich zur normalen Html Datei von Seite %TODO 
+ein bereits durch den \acs{SSR} Prozess aufgebaut wurde und somit für die meisten Crawler lesbar.
+\subsubsection{CMS}
+Das \acs{CMS} Drupal ist auf dem Server installiert und ist über eine eigene URL auf der Domain der Agenturseite freigeschaltet.
+Der komplette Hero-Image Sektion der Website wurde, wie auf Seite %TODO
+ zu sehen, im CMS gepflegt und ist im Hero-Image zu sehen.
 \subsection{Quo Vadis ?}
-
+Nach Abschluss ist noch eine Menge für die Seite zu tun.
+Das CMS  ist zwar vorhanden besitzt aber kaum Einträge oder Übersetzungen in andere Sprachen.
+Somit muss noch ein Übersetzung Service in Angular gebaut und Inhalte erstellt werden. Das Bootstraping der SSA verwirft den DOM zurzeit, deswegen ist der Einbau des "Preboot" Moduls grade an oberster Priorität.
 \subsection{Fazit für zukünftige Projekte}
-
+\newpage
 \appendix
 \section{Abbildungen}
 \includepdf[scale=0.8,pages=1,pagecommand=
@@ -207,13 +218,17 @@ kommt mit dem vergleich zur normalen Html Datei von Seite %TODO
 \subsubsection{Website Mockup}
 \center
 \includegraphics[draft,scale=0.1,height=22cm]{Vorlage}
-\includepdf[scale=0.8,pages=1,pagecommand=\subsubsection{Google PageSpeed Insights}\label{sec:google}]{pagespeed}
-\includepdf[scale=0.8,pages=1-2,pagecommand=\subsubsection{Pingdom}\label{sec:pingdom}]{pingdom}
+\includepdf[scale=0.8,pages=1,pagecommand=\subsubsection{PageSpeed Insights}\label{sec:google}]{pagespeed}
+\includepdf[scale=0.8,pages=1-2,pagecommand=\subsubsection{
+}\label{sec:pingdom}]{pingdom}
 \subsection{Screenshots}
 \subsubsection{Alte Website}
 \includegraphics[scale=0.3]{getcore}
 \subsubsection{Entwickler Dokumentation}
 \label{sec:doku}
 \includegraphics[scale=0.3]{compodoc}
+\subsubsection{Responsive Design}
+\label{sec:responsive}
+\includegraphics[scale=0.3]{responsive}
 
 \end{document}
