@@ -13,7 +13,9 @@
 ]{hyperref}
 \usepackage{lmodern,textcomp}
 \usepackage{graphicx}
+\usepackage{appendix}
 \usepackage{pdfpages}
+\usepackage{listings}
 \graphicspath{ {images/} }
 \usepackage{amsmath}
 \usepackage{svg}
@@ -65,7 +67,7 @@
 \newpage
 \begin{acronym}[Full Stack]
  \acro{SSR}{Server Sided Rendering}
- \acro{SSA}{Single Site Application}
+ \acro{SPA}{Single Page Application}
  \acro{DOM}{Document Object Model}
 \end{acronym}
 \begin{acronym}[Allgemein]
@@ -82,12 +84,12 @@ Dabei legt die zmb Wert darauf alle Wünsche des Kunden, von der Bereitstellung 
 \subsection{Beschreibung des Projektes}
 Für die neu geplanten Agenturarbeiten der zmb, soll eine neue Internet-Präsenz aufgebaut werden.\\\\
 Die zmb wird zurzeit nur durch eine Website aus Seiten, die durch das interne CMS System gepflegt werden, präsentiert, sowie auf Partnerseiten.\\\\
-Die neue Seite wird eine \acs{SSA} um die Seite für den Kunden modern und schnell zu machen.  
-Der Server muss dafür die \acs{SSA} bereits kompiliert versenden, da Suchmaschinen sich nur die gesendete HTML Datei ansehen, dafür benötigen wird ein \acs{SSR}-Setup auf dem Server.
+Die neue Seite wird eine \acs{SPA} um die Seite für den Kunden modern und schnell zu machen.  
+Der Server muss dafür die \acs{SPA} bereits kompiliert versenden, da Suchmaschinen sich nur die gesendete HTML Datei ansehen, dafür benötigen wird ein \acs{SSR}-Setup auf dem Server.
 Dafür wird im Verlauf des Projekts ein Server gemietet sowie aufgesetzt. Und eine Website erstellt auf der potentielle Kunden mit der zmb in Kontakt treten können.  
 \subsection{Ziel des Projektes}
-Am Ende des Projekts soll eine \acs{SSA} entstehen die mithilfe von \acs{SSR} auch ein Vernünftiges SEO Ranking hinbekommt. Dabei sollen namenhafte Geschwindigkeitsindexe die Seite mit maximalen Punkten bewerten.
-Die Inhalte der \acs{SSA} werden über ein selbst auf dem Server installiertes CMS-System eingetragen.
+Am Ende des Projekts soll eine \acs{SPA} entstehen die mithilfe von \acs{SSR} auch ein Vernünftiges SEO Ranking hinbekommt. Dabei sollen namenhafte Geschwindigkeitsindexe die Seite mit maximalen Punkten bewerten.
+Die Inhalte der \acs{SPA} werden über ein selbst auf dem Server installiertes CMS-System eingetragen.
 Am Ende entsteht somit eine Website die auch ohne Hilfe von HTML sowie JS und CSS gepflegt werden kann.
 \subsection{Umfeld des Projektes}
 Das Projekt wurde vom COO Simeon Gerodetti beantragt.\\
@@ -166,63 +168,116 @@ Somit Rechnet sich die Seite bereits nach 9h Agenturarbeit. Das entspricht 9 Kun
 \subsection{Anforderungen}
 Angefordert wurde eine neue Website.\\\\
 Diese Websie muss höchste Punktzahl in verschiedenen Tempo Benchmarks bringen, um den Besuche zu zeigen das die zmb modernste Technologien beherrscht.\\\\
-Dabei soll dem Besucher \acs{SSA} entstehen damit der Benutzer wenn er auf der Seite navigiert nicht den \acs{DOM} bei jedem Request neu berechnen muss. 
-Zur Erstellung der SSA soll Angular, da es sich hierbei um eine bereits im Unternehmen etabliertes Framework handelt.\\\\
+Dabei soll dem Besucher \acs{SPA} entstehen damit der Benutzer wenn er auf der Seite navigiert nicht den \acs{DOM} bei jedem Request neu berechnen muss. 
+Zur Erstellung der SPA soll Angular verwendet werden, da es sich hierbei um eine bereits im Unternehmen etabliertes Framework handelt.\\\\
 Damit Crawler etc unsere Seite vernünftig indexieren können muss die Seite bereits auf dem Server vorgerechnet werden um einen fertigen \acs{DOM} an den Crawler zu senden.
 Der Prototyp soll dem Mockup von S. Gerodetti ähneln, das Mockup ist auf Seite \pageref{tbl:Übersicht der Zeitplanung} einzusehen.\\Für den Anfang wird nur das Hero Image, sowie das Kontaktformular auf der Landingpage benötigt. 
+\subsubsection{SSR PoC}
+Zur Analyse gehörte auch der Beweis das der SSR Prozess funktioniert. Die von Angular bereitgestellte Projekt Repo\footnote{https://github.com/angular/universal-starter} konnte
 \section{Entwurfsphase}
-\subsection{Architektur}
+Die Anforderungen verlangen eine Website, dadurch ist die Wahl der Zielplattform der Webbrowser\footnote{Alle Webbrowser ab IE9}. Dabei verwenden wir soviel es geht TypeScript\footnote{https://www.typescriptlang.org/}, da es sich hierbei um eine in der Firma etablierte Sprache handelt. TypeScript wird deswegen sowohl auf Client als auch Server Ebene verwendet. 
 \subsection{Server}
-\subsection{Client/Frontend}
+Der Entwurf der Server Komponenten sind auf Seite x referenziert. Der Server ist ein, von Amazon gebuchter, Lightsail\footnote{•} Server der über ein Linux OS mit Ubuntu als Distribution verfügt.
+\subsubsection{CMS}
+Geplant ist ein CMS System auf dem Server (Drupal) mit Datenbank(MYSQL). Dabei soll für jede Komponente der Website, die auf Seite %TODO 
+referenziert werden, ein Inhaltstyp erstellt werden.\\
+Die Inhalte sollen über ein REST-Modul in Drupal dann per REST API für die SPA erreichbar sein.
+Geplant sind vorerst folgende Rest Schnittstellen:
+\begin{table}[!ht]
+  \centering
+     \begin{tabular}{l|c}
+       \textbf{Schnittstelle}  & \textbf{Endpunkt} \\
+       \hline
+       Inhalte einer bestimmten Seite & \textbf{export/pages/SEITENNAME} \\
+       Inhalte aller Seiten & \textbf{export/pages/all} \\
+       Inhalte einer bestimmten Sektion & \textbf{/export/paragraphs/ID} \\
+       Inhalte aller Sektionen & \textbf{export/paragraphs/all}\\
+       Inhalte der Kopfzeile & \textbf{export/headbar}\\
+     \end{tabular}
+\caption{REST-API}
+\end{table}
+\subsubsection{HTTP/HTTPS}
+Der Server soll über HTTP/HTTPS erreichbar sein. Der Server muss unterscheiden, ob der Benutzer die Agentur SPA anfragt oder das CMS System. In Anbetracht der weiteren Entwicklung wurde eine zweite Instanz der Webseite erstellt, um Produktions Website von der Entwicklung Website zu trennen. Deswegen werden auf dem Server folgende Routen eingestellt:
+\begin{table}[!ht]
+  \centering
+     \begin{tabular}{l|c}
+       \textbf{Anwendung}  & \textbf{Route} \\
+       \hline
+       Drupal & \textbf{/drupal}\\
+       SPA/Agentur Website & \textbf{/}\\
+       SPA/Entwicklung & \textbf{/dev}\\ 
+     \end{tabular}
+\caption{Routen}
+\end{table}
+\subsubsection{Node}
+Um Javascript auf einem Server ausführen zu können, muss ein Node Server vorhanden sein.
+Der Node Server muss jede auf ihm zeigende Route abfangen und die zugehörige Route der SPA bereitstellen. Hier findet der eigentliche SSR Prozess statt, dafür muss dem Node Server die ganze SPA bereitgestellt werden. Dafür wird das Express Framework verwendet welches HTTP anfragen an den Node Server verarbeitet. Mit
+\subsection{Single Page Application}
+Das Framework welches für die SPA verwendet wird ist Angular\footnote{https://angular.io}, welches die zmb seit Jahren produktiv einsetzt. Bei Angular wird der Fokus auf wiederverwendbare Komponenten gesetzt die, wie native DOM-Element, in das HTML eingebunden werden.\\\\
+Bei der SPA muss dem Layout aus den Anforderungen, auf Seite %TODO
+, entsprechen. Dafür wurde der generelle Seiten-Aufbau in der Grafik  ,auf Seite %TODO 
+festgelegt. Deswegen werden Komponenten entworfen, die für einzelne Passage der Website stehen. 
+Um die Rest-API vom CMS  konsumieren zu können, benötigen wir noch ein Service\footnote{https://angular.io/guide/dependency-injection}.
+Der Entwurfsplan der SPA ist auf der Seite %TODO
+hinterlegt.
 \section{Implementierungsphase}
-\subsection{Pläne}
+\subsection{Server}
+\subsubsection{Aufsetzen des Servers}
+Der gebuchte Lightsail Server wird nur mit einer minimalen Installation ausgeliefert. Als erstes werden die benötigten Programme installiert. Dabei werden die unter Server aufgeführten Programme über den Ubuntu Package Manager "apt" installiert. Für die einfache Arbeit mit dem Server wurden symbolische Links, auf wichtige Serverressourcen und Programme, in das Home Verzeichnis des Users angelegt, wie auf dem Sreenshot auf Seite %TODO .
+\subsubsection{NGINX}
+Der HTTPS Teil des Servers wird von NGINX gesteuert. Nach der Installation des NGINX, muss der NGINX Service gestartet werden. Sobald der NGINX läuft kann der Server konfiguriert werden. Da Drupal und Node auf dem selben Server liegen müssen für beide unterschiedliche Routen in der Konfiguration angelegt werden wie auf Seite \pageref{sec:nginx}.
+\subsubsection{CMS}
+Drupal ist das einzige Programm welches nicht über Package Manager installiert wurde.
+\subsubsection{Node}
+Neben Node wurde noch PM2\footnote{http://pm2.keymetrics.io/} installiert um den Node Prozess bei Abstürzen automatisch neu zu starten. Das Programm 
+\subsection{SPA}
 \section{Abschlussphase}
 \section{Dokumentation}
 Die Dokumentation besteht aus zwei Teilen einer Projektdokumentation und einer Entwickler Dokumentation.
-\subsubsection{Projektdokumentation}
+\subsection{Projektdokumentation}
 Die Projektdokumentation besteht aus einer genauen Beschreibung der für die Ausführung des Projektes benötigten Phasen, sowie Information zur in der Phase benutzten Technologie.
 Die Dokumentation wird mit \LaTeX geschrieben um ein einheitliches Layout zu gewähren.
-\subsubsection{Projektdokumentation}
+\subsection{Entwickerdokumentation}
 Die Entwicklerdokumentation besteht aus einer automatisch generierten Doku unter Verwendung von Compodoc\footnote{https://compodoc.github.io/compodoc/}, welcher alle Informationen aus dem Sourcecode bezieht und diese für Entwickler aufbereitet. Diese Dokumentation ist aus dem Sourcecode für alle Entwickler kompilierbar. Screenshot im Anhang \ref{sec:doku} auf Seite \pageref{sec:doku}.
 \section{Endstand}
 Das Projekt wurde mit einer funktionstüchtigen Website abgeschlossen. 
 \subsection{Ist/Soll-Zustand}
 Der Ist-Zustand wird in den folgenden Abschnitten mit den Anforderungen(Soll-Zustand) verglichen.
 \subsubsection{Geschwindigkeit}
-Die Website soll in gängigen Benchmarks mit höchsten Punktzahlen abschneiden.
-Als Benchmarks wurden Pingdom und PageSpeed Insights verwendet.
-Bei beiden hat die Seite die höchstmögliche Punktzahl.
-Die Berichte für Pingdom sowie PageSpeed Insight sind auf Seite  \pageref{sec:google}/\pageref{sec:pingdom}
+Die Website schneidet mit höchsten Punktzahlen bei den Ausgewählten Benchmarks ab.
+Die Berichte für Pingdom sowie PageSpeed Insight sind auf Seite  \pageref{sec:google}/\pageref{sec:pingdom}. Die Google Audits für Performance konnten nicht im Zeitrahmen des Projekts nicht in den grünen Bereich gebracht werden. Übersicht des Audits ist auf Seite %TODO
+zu sehen.
 \subsubsection{Layout}
-Das Layout soll dem Mockup entsprechen und responsive sein. 
-Das fertige Layout auf 3 verschiedenen Endgeräten ist auf Seite  %TODO
+Das fertige Layout ist auf 3 verschiedenen Endgeräten auf Seite  %TODO
 zu sehen. Die Navigation in der Kopfzeile fehlt, da es noch keine Navigation auf der Seite gibt.
 Problematisch ist die weiße Überschrift, welche wenn sie die Erde berührt nur schwer zu Lesen ist.
+\subsubsection{SPA}
+Die geschriebene SPA ist in der Lage die Seite in gewünschter Form anzuzeigen. Die Screenshots aus dem Layout Teil sind direkt in der SPA enstanden. 
 \subsubsection{SSR}
-Beim Request der Seite sollte eine vorgerechnete Seite ankommen. Wie dem Screenshot auf Seite %TODO
-kommt mit dem vergleich zur normalen Html Datei von Seite %TODO 
-ein bereits durch den \acs{SSR} Prozess aufgebaut wurde und somit für die meisten Crawler lesbar.
+Die Seite wird, wie auf den Screenshots auf Seite X und Y gezeigt, bereits auf dem Server gerendert.
 \subsubsection{CMS}
-Das \acs{CMS} Drupal ist auf dem Server installiert und ist über eine eigene URL auf der Domain der Agenturseite freigeschaltet.
-Der komplette Hero-Image Sektion der Website wurde, wie auf Seite %TODO
- zu sehen, im CMS gepflegt und ist im Hero-Image zu sehen.
+Das \acs{CMS} Drupal ist auf dem Server installiert und ist über eine eigene URL auf der Domain der Agenturseite freigeschaltet. Inhalte werden bereits für die Seite erstellt und gepflegt, wie auf Seite %TODO 
+zu sehen ist. 
 \subsection{Quo Vadis ?}
 Nach Abschluss ist noch eine Menge für die Seite zu tun.
 Das CMS  ist zwar vorhanden besitzt aber kaum Einträge oder Übersetzungen in andere Sprachen.
-Somit muss noch ein Übersetzung Service in Angular gebaut und Inhalte erstellt werden. Das Bootstraping der SSA verwirft den DOM zurzeit, deswegen ist der Einbau des "Preboot" Moduls grade an oberster Priorität.
+Somit muss noch ein Übersetzung Service in Angular gebaut und Inhalte erstellt werden. Das Bootstraping der SPA verwirft den DOM zurzeit, deswegen ist der Einbau des "Preboot" Moduls grade an oberster Priorität. Geplant ist auch das verwenden von Service Workers\footnote{https://developers.google.com/web/fundamentals/primers/service-workers/} wie Google Amp\footnote{https://www.ampproject.org/}. 
 \subsection{Fazit für zukünftige Projekte}
-\newpage
-\appendix
-\section{Abbildungen}
-\includepdf[scale=0.8,pages=1,pagecommand=
-\subsection{Tabellen}\subsubsection{Detaillierte Übersicht der Aufgaben}\label{sec:teilaufg}]{Teilaufgaben}
+\begin{appendices}
+\includepdf[scale=0.7,pages=1,pagecommand=\section{Abbildungen}\subsection{Tabellen}\subsubsection{Detaillierte Übersicht der Aufgaben}\label{sec:teilaufg}]{Teilaufgaben}
 \subsection{Grafiken}
+\subsubsection{Aufbau der Seite}
+\includegraphics[scale=0.5,height=10cm]{Seite}
+\subsubsection{Projekt Architektur}
+\includegraphics[scale=0.5,height=10cm]{Entwurf}
+\subsubsection{SSR Node Entwurf}
+\includegraphics[scale=1]{SSR}
+\subsubsection{SPA Entwurf}
+\includegraphics[scale=0.7]{SSA}
 \subsubsection{Website Mockup}
-\center
-\includegraphics[draft,scale=0.1,height=22cm]{Vorlage}
+\includegraphics[draft,scale=0.1,height=20cm]{Vorlage}
 \includepdf[scale=0.8,pages=1,pagecommand=\subsubsection{PageSpeed Insights}\label{sec:google}]{pagespeed}
-\includepdf[scale=0.8,pages=1-2,pagecommand=\subsubsection{
-}\label{sec:pingdom}]{pingdom}
+\includepdf[scale=0.8,pages=1-2,pagecommand=\subsubsection{Pingdom}\label{sec:pingdom}]{pingdom}
 \subsection{Screenshots}
 \subsubsection{Alte Website}
 \includegraphics[scale=0.3]{getcore}
@@ -232,5 +287,23 @@ Somit muss noch ein Übersetzung Service in Angular gebaut und Inhalte erstellt 
 \subsubsection{Responsive Design}
 \label{sec:responsive}
 \includegraphics[scale=0.3]{responsive}
-
+\section{Code Beispiele}
+\subsection{NGINX Konfiguration Auszug}
+\label{sec:nginx}
+\begin{lstlisting}
+location  / {
+        proxy_pass http://localhost:1337/;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+    
+location /drupal/ {
+        index index.php;
+        root /data/www/drupal;
+    }
+\end{lstlisting}
+\end{appendices}
 \end{document}
