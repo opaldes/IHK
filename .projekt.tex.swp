@@ -144,7 +144,7 @@ Für die Entwicklung wird auf Open Source Lösungen gesetzt. Eine genau Liste de
 \begin{table}[!ht]
   \centering
      \begin{tabular}{l|r||l|r}
-       \textbf{Personalkosten}  & &\textbf{Sachkosten}& \\
+       \textbf{Persona<,osten}  & &\textbf{Sachkosten}& \\
        \hline
        Entwickler      &    70*10€ = 700€    &  AWS Lightsail Server      &     5€/mtl\\
        COO    &  2*30€ = 60€               	    &  Domain & 20€/jahr\\
@@ -165,13 +165,15 @@ x = 850 / 100 = 8.5
 Somit Rechnet sich die Seite bereits nach 9h Agenturarbeit. Das entspricht 9 Kunden im Worst-Case-Szenario die durch die Seite Agenturarbeit buchen.
 \subsection{Anforderungen}
 Angefordert wurde eine neue Website.\\\\
-Diese Websie muss höchste Punktzahl in verschiedenen Tempo Benchmarks bringen, um den Besuche zu zeigen das die zmb modernste Technologien beherrscht.\\\\
+Diese Website muss höchste Punktzahl in verschiedenen Tempo Benchmarks bringen, um den Besucher zu zeigen das die zmb modernste Technologien beherrscht.\\\\
 Dabei soll dem Besucher \acs{SSA} entstehen damit der Benutzer wenn er auf der Seite navigiert nicht den \acs{DOM} bei jedem Request neu berechnen muss. 
 Zur Erstellung der SSA soll Angular, da es sich hierbei um eine bereits im Unternehmen etabliertes Framework handelt.\\\\
 Damit Crawler etc unsere Seite vernünftig indexieren können muss die Seite bereits auf dem Server vorgerechnet werden um einen fertigen \acs{DOM} an den Crawler zu senden.
-Der Prototyp soll dem Mockup von S. Gerodetti ähneln, das Mockup ist auf Seite \pageref{tbl:Übersicht der Zeitplanung} einzusehen.\\Für den Anfang wird nur das Hero Image, sowie das Kontaktformular auf der Landingpage benötigt. 
+Der Prototyp soll dem Mockup von S. Gerodetti ähneln, das Mockup ist auf Seite \pageref{tbl:Übersicht der Zeitplanung} einzusehen.\\Für den Anfang wird nur das Hero Image, sowie das Kontaktformular auf der Landingpage benötigt.
 \section{Entwurfsphase}
+Während der Entwurfsphase entstand ein Plan zur Umsetzung der Website.
 \subsection{Architektur}
+Um die spätere SSR/SSA zu unterstützen müssen wir einen Webserver bauen 
 \subsection{Server}
 \subsection{Client/Frontend}
 \section{Implementierungsphase}
