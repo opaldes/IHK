@@ -1,0 +1,43 @@
+{
+  "compilerOptions": {
+    "baseUrl":"src/app",
+    "module": "ES2015",
+    "target": "ES5",
+    "moduleResolution": "node",
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "noEmit": true,
+    "noEmitHelpers": true,
+    "strictNullChecks": false,
+    "outDir":"dist",
+    "lib": [
+      "es2015",
+      "dom"
+    ],
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true
+  },
+  "exclude": [
+    "node_modules",
+    "dist",
+    "out"
+  ],
+  "files": [
+    "build/app/app.server.ts",
+    "build/app/app.ts"
+  ],
+  "angularCompilerOptions": {
+    "genDir":"./",
+    "trace":true,
+    "skipMetadataEmit": true,
+    "strictMetadataEmit": true
+  },
+  "compileOnSave": false,
+  "buildOnSave": false
+}

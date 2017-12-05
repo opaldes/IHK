@@ -1,0 +1,12 @@
+\BOOKMARK [1][-]{section.1}{Services}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{DrupalService}{section.1}% 2
+\BOOKMARK [1][-]{section.2}{Components}{}% 3
+\BOOKMARK [2][-]{subsection.2.1}{HeroSectionComponent}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.2}{PageComponent}{section.2}% 5
+\BOOKMARK [1][-]{section.3}{Server}{}% 6
+\BOOKMARK [2][-]{subsection.3.1}{Node Main}{section.3}% 7
+\BOOKMARK [2][-]{subsection.3.2}{NGINX}{section.3}% 8
+\BOOKMARK [1][-]{section.4}{Other}{}% 9
+\BOOKMARK [2][-]{subsection.4.1}{Gulp}{section.4}% 10
+\BOOKMARK [2][-]{subsection.4.2}{package.json}{section.4}% 11
+\BOOKMARK [2][-]{subsection.4.3}{Compiler}{section.4}% 12

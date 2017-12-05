@@ -1,0 +1,13 @@
+\select@language {german}
+\contentsline {section}{\numberline {1}Services}{3}{section.1}
+\contentsline {subsection}{\numberline {1.1}DrupalService}{3}{subsection.1.1}
+\contentsline {section}{\numberline {2}Components}{4}{section.2}
+\contentsline {subsection}{\numberline {2.1}HeroSectionComponent}{4}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}PageComponent}{5}{subsection.2.2}
+\contentsline {section}{\numberline {3}Server}{8}{section.3}
+\contentsline {subsection}{\numberline {3.1}Node Main}{8}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}NGINX}{9}{subsection.3.2}
+\contentsline {section}{\numberline {4}Other}{12}{section.4}
+\contentsline {subsection}{\numberline {4.1}Gulp}{12}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}package.json}{14}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Compiler}{15}{subsection.4.3}

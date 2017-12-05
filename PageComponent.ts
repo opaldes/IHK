@@ -78,7 +78,10 @@ export class PageComponent {
 
     }
 
-
+    /**
+     * [Callback Function executed when all Section promises resolved]
+     * @param  {any}    sections [Section]
+     */
     onSectionsRdy(sections:any){
 
         //Its Possible that old view container where loaded so we clear em here
@@ -101,6 +104,11 @@ export class PageComponent {
         this.sections = sections.map((section) => {return this.drupalService.getParagraph(section.target_uuid)});
     }
 
+    /**
+     * Takes a section and returns it type
+     * @param  {any}    section
+     * @return {string}         [section Type]
+     */
     private getSectionType(section:any):string{
 
         if(section.type && section.type[0]){
@@ -110,38 +118,3 @@ export class PageComponent {
     }
 
 }
-/* Page Scheme
-[
-{"nid":[{"value":2}],
-"uuid":[{"value":"ee44a280-7dc7-42da-aac3-edc08183b892"}],
-"vid":[{"value":2}],
-"langcode":[{"value":"de"}],
-"type":[{"target_id":"page","target_type":"node_type","target_uuid":"7860a291-e33b-4a3f-8961-4d26aa45e149"}],
-"status":[{"value":true}],
-"title":[{"value":"StartSeite"}],
-"uid":[{"target_id":1,"target_type":"user","target_uuid":"c3b0a573-5c51-491b-b375-bd26fd552efe","url":"\/drupal\/index.php\/user\/1"}],"created":[{"value":1507125516}],"changed":[{"value":1507126999}],"promote":[{"value":false}],"sticky":[{"value":false}],"revision_timestamp":[{"value":1507125582}],"revision_uid":[{"target_id":1,"target_type":"user","target_uuid":"c3b0a573-5c51-491b-b375-bd26fd552efe","url":"\/drupal\/index.php\/user\/1"}],
-"revision_log":[],
-"revision_translation_affected":[{"value":true}],
-"default_langcode":[{"value":true}],
-"field_paragraph":[{"target_id":2,"target_revision_id":2,"target_type":"paragraph","target_uuid":"714509c5-1c88-4cc7-8695-b8dc6f8f4735"},{"target_id":3,"target_revision_id":3,"target_type":"paragraph","target_uuid":"89e634ba-b758-4166-8618-dc392b94a5ad"}],"field_url":[]}]
-
-
-
-
-this.sectionObservable.subscribe((data)=>{
-    this.section = data[0];
-    try{
-        this.type = this.getSectionType();
-        console.log(this.type);
-        console.log(map[this.type]);
-        const factory = this.factoryResolver.resolveComponentFactory(map[this.type]);
-        this.component = this.viewContainer.createComponent(factory);
-    }catch(error){
-        console.error("Could not add Section component for " + this.section + "\n Error: " + error);
-    }
-
-    this.component.changeDetectorRef.detectChanges();
-
-})
-
-*/

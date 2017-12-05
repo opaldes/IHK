@@ -1,0 +1,48 @@
+{
+  "name": "zmbssr",
+  "version": "1.0.0",
+  "description": "zmb SSR Basic Test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jeremy Seipelt",
+  "license": "ISC",
+  "dependencies": {
+    "@angular/animations": "^4.4.6",
+    "@angular/common": "^4.4.6",
+    "@angular/core": "^4.4.6",
+    "@angular/forms": "^4.4.6",
+    "@angular/http": "^4.4.6",
+    "@angular/platform-browser": "^4.4.6",
+    "@angular/platform-browser-dynamic": "^4.4.6",
+    "@angular/platform-server": "^4.4.6",
+    "@angular/router": "^4.4.6",
+    "@nguniversal/express-engine": "^1.0.0-beta.3",
+    "@types/express": "^4.0.37",
+    "@uirouter/angular": "^1.0.0-beta.7",
+    "express": "^4.15.4",
+    "preboot": "^5.1.7",
+    "reflect-metadata": "^0.1.10",
+    "request": "^2.81.0",
+    "roboto-fontface": "^0.8.0",
+    "rxjs": "^5.0.1",
+    "zone.js": "^0.8.4"
+  },
+  "devDependencies": {
+    "@angular/compiler": "^4.4.6",
+    "@angular/compiler-cli": "^4.4.6",
+    "@types/request": "^2.0.3",
+    "gulp": "^3.9.1",
+    "gulp-gzip": "^1.4.0",
+    "gulp-ngc": "^0.3.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-tar": "^2.0.0",
+    "gulp-typescript": "^3.2.2",
+    "gulp-webpack": "^1.5.0",
+    "merge2": "^1.1.0",
+    "ts-loader": "^2.3.4",
+    "typescript": "^2.4.2",
+    "webpack": "^3.5.5"
+  }
+}

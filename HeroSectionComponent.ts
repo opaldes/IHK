@@ -38,6 +38,10 @@ export class HeroSectionComponent
         this.field_backgroundimage =  'url(' + this.getHeroImageURL() + ')';
     }
 
+    /**
+     * retrieves Hero Image URl from the Section Metadata else ""
+     * @return {string} [Hero IMAGE URL]
+     */
     public getHeroImageURL():string
     {
         if(this.section.field_backgroundimage[0]){
