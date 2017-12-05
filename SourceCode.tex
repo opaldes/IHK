@@ -1,0 +1,94 @@
+\documentclass[11pt,a4paper]{article}
+\setlength{\headheight}{34pt}
+\renewcommand{\baselinestretch}{1.3}\normalsize
+\usepackage[margin=1.2in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[german]{babel}
+\usepackage[printonlyused]{acronym}
+\usepackage[
+	colorlinks=false,
+	urlcolor=blue,
+	linkcolor= gray
+]{hyperref}
+\usepackage{lmodern,textcomp}
+\usepackage{graphicx}
+\usepackage{appendix}
+\usepackage{pdfpages}
+\usepackage{listings}
+\graphicspath{ {images/} }
+\usepackage{amsmath}
+\usepackage{svg}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\includegraphics[scale=0.05]{logo_zmb}}
+\lhead{\textbf{Agentur Website}\\Ein Full Stack Webdevelopement Projekt}
+\rfoot{Seite \thepage}
+\author{Jeremy Seipelt}
+\title{IHK Abschluss-Projekt 2017}
+\begin{document}
+\clearpage\maketitle
+\thispagestyle{empty}
+	\begin{center}
+		\begin{Large}
+		
+			
+			Für den Beruf des Fachinformatiker der Anwendungsentwicklung\\
+			
+		\end{Large}
+	\end{center}
+ 
+ 	\begin{center}
+		\begin{LARGE}
+			 \textbf{Agentur Website}\\			 
+		 Ein Full-Stack Web-Developer Projekt\\
+		\end{LARGE}
+	\end{center}
+	\begin{center}
+		\begin{LARGE}
+		 \textbf{\textsc{SOURCE CODE}}
+		\end{LARGE}
+	\end{center}
+	\begin{center}
+	Auszubbildner: \\ 
+ 	Jeremy Seipelt\\
+ 	Pichelsdorferstr. 72\\
+	 13595 Berlin\\
+	\end{center}	
+	
+	\begin{center}
+		\includegraphics[scale=0.05]{logo_zmb}\\
+ 		Ausbildungsbetrieb:\\
+ 		zmb GmbH\\
+ 		Scharnhorstr. 112\\
+ 		11234 Berlin \\
+ 	\end{center}
+\newpage
+\tableofcontents
+\newpage
+\section{Services}
+\subsection{DrupalService}
+\lstinputlisting[basicstyle=\footnotesize firstline = 9]{DrupalService.ts}
+\section{Components}
+\subsection{HeroSectionComponent}
+\lstinputlisting[basicstyle=\footnotesize]{HeroSectionComponent.ts}
+\subsection{PageComponent}
+\lstinputlisting[basicstyle=\footnotesize]{PageComponent.ts}
+\section{Server}
+\subsection{Node Main}
+\lstinputlisting[basicstyle=\footnotesize]{main.ts}
+\subsection{NGINX}
+\lstinputlisting[basicstyle=\footnotesize]{NGINX}
+\section{Other}
+\subsection{Gulp}
+\lstinputlisting[basicstyle=\footnotesize firstline = 2]{gulpfile.js}
+\subsection{package.json}
+\lstinputlisting[basicstyle=\footnotesize]{package.json}
+\subsection{Compiler}
+\lstinputlisting[basicstyle=\footnotesize]{tsconfig-aot.json}
+
+
+\end{document}
