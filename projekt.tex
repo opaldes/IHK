@@ -73,6 +73,7 @@
  \acro{DOM}{Document Object Model}
  \acro{CMS}{Content Management System}
  \acro{AOT}{Ahead of time}
+<<<<<<< HEAD
  \acro{REST}{Representational State Transfer}
  \acro{SASS}{Super Awsome Style Sheets}
  \acro{API}{Application Programming Interface}
@@ -80,6 +81,8 @@
   
  
 
+=======
+>>>>>>> 59b5edd8e92dd8f23ebf8162aac5590741680b0e
 \end{acronym}
 \begin{acronym}[Allgemein]
  \acro{B2B}{Business to Business}
@@ -188,6 +191,7 @@ Zur Analyse gehörte auch der Beweis das der SSR Prozess funktioniert. Die von A
 \section{Entwurfsphase}
 Die Anforderungen verlangen eine Website, dadurch ist die Wahl der Zielplattform der Webbrowser\footnote{Alle Webbrowser ab IE9}. Dabei verwenden wir soviel es geht TypeScript\footnote{https://www.typescriptlang.org/}, da es sich hierbei um eine in der Firma etablierte Sprache handelt. TypeScript wird deswegen sowohl auf Client als auch Server Ebene verwendet und vorher zu JavaScript kompiliert. 
 \subsection{Server}
+<<<<<<< HEAD
 Der Server ist ein, von Amazon gebuchter, Lightsail\footnote{https://amazonlightsail.com/} Server der über ein Linux OS mit Ubuntu als Distribution verfügt. Die auf Seite \pageref{sec:progs} für den Server markierten Programmen sollen auf dem Server installiert werde.
 \subsubsection{CMS}
 Geplant ist ein CMS System auf dem Server (Drupal) mit Datenbank(MYSQL). Dabei soll für jede Komponente der Website, die auf Seite \pageref{sec:epage}
@@ -195,6 +199,15 @@ referenziert werden, ein Inhaltstyp erstellt werden.\\
 Die Inhalte sollen über ein REST-Modul in Drupal dann per REST \acs{API} für die SPA erreichbar sein.
 Diese Inhalte  werden in dem JSON\footnote{https://www.json.org/} Format versendet. 
 Geplant sind vorerst folgende REST Schnittstellen:
+=======
+Der Server ist ein, von Amazon gebuchter, Lightsail\footnote{https://amazonlightsail.com/} Server der über ein Linux OS mit Ubuntu als Distribution verfügt. Die auf Seite %TODO für den Server markierten Programmen sollen auf dem Server installiert werde.
+\subsubsection{CMS}
+Geplant ist ein CMS System auf dem Server (Drupal) mit Datenbank(MYSQL). Dabei soll für jede Komponente der Website, die auf Seite \pageref{sec:epage}
+referenziert werden, ein Inhaltstyp erstellt werden.\\
+Die Inhalte sollen über ein REST-Modul in Drupal dann per REST API für die SPA erreichbar sein.
+Diese Inhalte  werden in dem JSON\footnote{https://www.json.org/} Format versendet. 
+Geplant sind vorerst folgende Rest Schnittstellen:
+>>>>>>> 59b5edd8e92dd8f23ebf8162aac5590741680b0e
 \begin{table}[!ht]
   \centering
      \begin{tabular}{l|c}
@@ -223,7 +236,11 @@ Der Server soll über HTTP/HTTPS erreichbar sein. Der Server muss unterscheiden,
 \end{table}
 \subsubsection{Node}
 Um Javascript auf einem Server ausführen zu können, muss ein Node Server vorhanden sein.
+<<<<<<< HEAD
 Der Node Server muss jede auf ihm zeigende Route abfangen und die zugehörige Route der SPA bereitstellen. Hier findet der eigentliche SSR Prozess statt, dafür muss dem Node Server die ganze SPA bereitgestellt werden. Dafür wird das Express Framework verwendet welches HTTP anfragen an den Node Server verarbeitet. Damit Node mit der SPA funktioniert muss ein \acs{AOT} Compiler die Anwendung für den Server kompilieren.
+=======
+Der Node Server muss jede auf ihm zeigende Route abfangen und die zugehörige Route der SPA bereitstellen. Hier findet der eigentliche SSR Prozess statt, dafür muss dem Node Server die ganze SPA bereitgestellt werden. Dafür wird das Express Framework verwendet welches HTTP anfragen an den Node Server verarbeitet. Damit Node mit der SPA funktioniert muss ein AOT Compiler die Anwendung für den Server kompilieren.
+>>>>>>> 59b5edd8e92dd8f23ebf8162aac5590741680b0e
 \subsection{Single Page Application}
 Das Framework welches für die SPA verwendet wird ist Angular\footnote{https://angular.io}, welches die zmb seit Jahren produktiv einsetzt. Bei Angular wird der Fokus auf wiederverwendbare Komponenten gesetzt die, wie native DOM-Element, in das HTML eingebunden werden.\\\\
 Dafür wurde der generelle Seiten-Aufbau in der Grafik, auf Seite \pageref{sec:epage} 
@@ -233,13 +250,21 @@ Der Entwurfsplan der SPA ist auf der Seite \pageref{sec:espa} hinterlegt.
 \section{Implementierungsphase}
 \subsection{Server}
 \subsubsection{Aufsetzen des Servers}
+<<<<<<< HEAD
 Der gebuchte Lightsail Server wird nur mit einer minimalen Installation ausgeliefert. Als erstes werden die benötigten Programme installiert. Dabei werden die unter Server auf Seite \pageref{sec:progs} aufgeführten Programme über den Ubuntu Package Manager apt\footnote{https://wiki.ubuntuusers.de/APT/} installiert. Für die einfache Arbeit mit dem Server wurden symbolische Links, auf wichtige Serverressourcen und Programme, in das Home Verzeichnis des Users angelegt, wie auf dem Sreenshot auf Seite \pageref{sec:ordner} .
+=======
+Der gebuchte Lightsail Server wird nur mit einer minimalen Installation ausgeliefert. Als erstes werden die benötigten Programme installiert. Dabei werden die unter Server aufgeführten Programme über den Ubuntu Package Manager apt installiert. Für die einfache Arbeit mit dem Server wurden symbolische Links, auf wichtige Serverressourcen und Programme, in das Home Verzeichnis des Users angelegt, wie auf dem Sreenshot auf Seite \pageref{sec:ordner} .
+>>>>>>> 59b5edd8e92dd8f23ebf8162aac5590741680b0e
 \subsubsection{NGINX}
 Der HTTPS Teil des Servers wird von NGINX gesteuert. Nach der Installation des NGINX, muss der NGINX Service gestartet werden. Sobald der NGINX läuft kann der Server konfiguriert werden. Da Drupal und Node auf dem selben Server liegen müssen für beide unterschiedliche Routen in der Konfiguration angelegt werden wie auf Seite \pageref{sec:nginx}. Die komplette NGINX Konfiguration ist im Extra Source Code Anhang vorzufinden.
 \subsubsection{CMS}
 Nach dem Download von Drupal und der einrichtung von MySQL, wird Drupal über einen Aufruf im Webbrowser installiert. Die benötigten Module wurden eingespielt und die Inhaltstypen angelegt.
 Die Inhaltstypen mit ihren Feldern sind auf Seite \pageref{sec:content} ff. zu sehen.
+<<<<<<< HEAD
 Die REST Schnittstelle ist über das REST \acs{UI} Modul von Drupal erstellt worden, ein Screenshot der erstellten Schnittstellen ist auf Seite \pageref{sec:rest} zu sehen.
+=======
+Die REST Schnittstelle ist über das REST UI Modul von Drupal erstellt worden, ein Screenshot der erstellten Schnittstellen ist auf Seite \pageref{sec:rest} zu sehen.
+>>>>>>> 59b5edd8e92dd8f23ebf8162aac5590741680b0e
 \subsubsection{Node}
 Neben Node wurde noch PM2\footnote{http://pm2.keymetrics.io/} installiert um den Node Prozess bei Abstürzen automatisch neu zu starten. Die Installation von Pm2 sowie aller von der SPA benötigten Pakete erfolgt über den Node Package Manager. Dieser installiert automatisch alle Pakete die als Abhängigkeit  in der \textit{package.json} angegeben wurden.\\ Der Inhalt der package.json ist dem Source Code zu entnehmen.
 \subsection{SPA}
@@ -255,7 +280,11 @@ In folgenden werden die abschließenden Arbeiten beschrieben die den pagespeed u
 \subsection{Pagespeed}
 Um den maximalen Pagespeed zu erreichen musste auf dem Server beim NGINX der Cache, sowie gzip um gesendete Dateien vorher zu komprimieren, aktiviert werden.\\ Die Performanz des Audits konnte aufgrund der Limitierungen der benutzen Pakete/Libraries/Frameworks nur auf 69/100(zufriedenstellend) erhöht werden. 
 \subsection{Responsiveness}
+<<<<<<< HEAD
 Die Responsiveness der Website sollte durch die Verwendung von relativen Größen sichergestellt werden. Diese Annahme erwies sich jedoch als Falsch, denn was auf einem großem Bildschirm groß ist ist dann auf einem kleinen Bildschirm klein. Deswegen wurde um die Werte adjustieren zu können dem \acs{SASS} feste Breiten, für verschiedene Endgeräte, als Variablen angelegt.\\Die einzelnen Komponenten wurden dann auf Handy/Laptop/Computergröße fein justiert.  
+=======
+Die Responsiveness der Website sollte durch die Verwendung von relativen Größen sichergestellt werden. Diese Annahme erwies sich jedoch als Falsch, denn was auf einem großem Bildschirm groß ist ist dann auf einem kleinen Bildschirm klein. Deswegen wurde um die Werte adjustieren zu können dem SASS feste Breiten, für verschiedene Endgeräte, als Variablen angelegt.\\Die einzelnen Komponenten wurden dann auf Handy/Laptop/Computergröße fein justiert.  
+>>>>>>> 59b5edd8e92dd8f23ebf8162aac5590741680b0e
 \section{Dokumentation}
 Die Dokumentation besteht aus zwei Teilen einer Projektdokumentation und einer Entwickler Dokumentation.
 \subsection{Projektdokumentation}
@@ -292,7 +321,10 @@ Das benutzen einer AOT kompilierten Angular Application für serverseitiges Rend
 \begin{landscape}
 \includepdf[scale=1,pages=1,landscape=true,pagecommand=\subsubsection{Zeitplan}\label{sec:time}]{Zeitplan}
 \end{landscape}
+<<<<<<< HEAD
 \includepdf[scale=0.8,pages=1,pagecommand=\subsubsection{Programme}\label{sec:progs}]{programme}
+=======
+>>>>>>> 59b5edd8e92dd8f23ebf8162aac5590741680b0e
 \subsection{Grafiken}
 \subsubsection{Aufbau der Seite}
 \label{sec:epage}
@@ -308,8 +340,13 @@ Das benutzen einer AOT kompilierten Angular Application für serverseitiges Rend
 \includegraphics[scale=0.7]{SSA}
 \subsubsection{Website Mockup}
 \centering
+<<<<<<< HEAD
 Aufgrund der Größenlimitierung der PDF muss das Bild im Webbrowser Aufgerufen werden.\\
 https://goo.gl/qfjDmC
+=======
+\includegraphics[trim={0 10cm 0 0},height=20cm,clip]{Vorlage}
+\caption{https://goo.gl/qfjDmC}
+>>>>>>> 59b5edd8e92dd8f23ebf8162aac5590741680b0e
 \flushleft
 \includepdf[scale=0.8,pages=1,pagecommand=\subsubsection{PageSpeed Insights}\label{sec:google}]{pagespeed}
 \includepdf[scale=0.8,pages=1,pagecommand=\subsubsection{Pingdom}\label{sec:pingdom}]{pingdom}
