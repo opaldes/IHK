@@ -47,6 +47,7 @@
 \BOOKMARK [2][-]{subsection.1.A.1}{Tabellen}{Anhang.1.A}% 47
 \BOOKMARK [3][-]{subsubsection.1.A.1.1}{Detaillierte \334bersicht der Aufgaben}{subsection.1.A.1}% 48
 \BOOKMARK [3][-]{subsubsection.1.A.1.2}{Zeitplan}{subsection.1.A.1}% 49
+<<<<<<< HEAD
 \BOOKMARK [2][-]{subsection.1.A.2}{Grafiken}{Anhang.1.A}% 50
 \BOOKMARK [3][-]{subsubsection.1.A.2.1}{Aufbau der Seite}{subsection.1.A.2}% 51
 \BOOKMARK [3][-]{subsubsection.1.A.2.2}{Projekt Architektur}{subsection.1.A.2}% 52
@@ -65,3 +66,24 @@
 \BOOKMARK [3][-]{subsubsection.1.A.3.7}{Responsive Design}{subsection.1.A.3}% 65
 \BOOKMARK [1][-]{Anhang.1.B}{Code Beispiele}{}% 66
 \BOOKMARK [2][-]{subsection.1.B.1}{NGINX Konfiguration Auszug}{Anhang.1.B}% 67
+=======
+\BOOKMARK [3][-]{subsubsection.1.A.1.3}{Programme}{subsection.1.A.1}% 50
+\BOOKMARK [2][-]{subsection.1.A.2}{Grafiken}{Anhang.1.A}% 51
+\BOOKMARK [3][-]{subsubsection.1.A.2.1}{Aufbau der Seite}{subsection.1.A.2}% 52
+\BOOKMARK [3][-]{subsubsection.1.A.2.2}{Projekt Architektur}{subsection.1.A.2}% 53
+\BOOKMARK [3][-]{subsubsection.1.A.2.3}{SSR Node Entwurf}{subsection.1.A.2}% 54
+\BOOKMARK [3][-]{subsubsection.1.A.2.4}{SPA Entwurf}{subsection.1.A.2}% 55
+\BOOKMARK [3][-]{subsubsection.1.A.2.5}{Website Mockup}{subsection.1.A.2}% 56
+\BOOKMARK [3][-]{subsubsection.1.A.2.6}{PageSpeed Insights}{subsection.1.A.2}% 57
+\BOOKMARK [3][-]{subsubsection.1.A.2.7}{Pingdom}{subsection.1.A.2}% 58
+\BOOKMARK [2][-]{subsection.1.A.3}{Screenshots}{Anhang.1.A}% 59
+\BOOKMARK [3][-]{subsubsection.1.A.3.1}{Audit}{subsection.1.A.3}% 60
+\BOOKMARK [3][-]{subsubsection.1.A.3.2}{REST Schnittstellen Drupal}{subsection.1.A.3}% 61
+\BOOKMARK [3][-]{subsubsection.1.A.3.3}{Drupal Inhalte}{subsection.1.A.3}% 62
+\BOOKMARK [3][-]{subsubsection.1.A.3.4}{Alte Website}{subsection.1.A.3}% 63
+\BOOKMARK [3][-]{subsubsection.1.A.3.5}{Entwickler Dokumentation}{subsection.1.A.3}% 64
+\BOOKMARK [3][-]{subsubsection.1.A.3.6}{Ordner Struktur}{subsection.1.A.3}% 65
+\BOOKMARK [3][-]{subsubsection.1.A.3.7}{Responsive Design}{subsection.1.A.3}% 66
+\BOOKMARK [1][-]{Anhang.1.B}{Code Beispiele}{}% 67
+\BOOKMARK [2][-]{subsection.1.B.1}{NGINX Konfiguration Auszug}{Anhang.1.B}% 68
+>>>>>>> e913722... Finish

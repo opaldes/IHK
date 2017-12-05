@@ -31,13 +31,21 @@
 \contentsline {subsection}{\numberline {5.2}SPA}{8}{subsection.5.2}
 \contentsline {section}{\numberline {6}Abschlussphase}{8}{section.6}
 \contentsline {subsection}{\numberline {6.1}Pagespeed}{8}{subsection.6.1}
+<<<<<<< HEAD
 \contentsline {subsection}{\numberline {6.2}Responsiveness}{8}{subsection.6.2}
+=======
+\contentsline {subsection}{\numberline {6.2}Responsiveness}{9}{subsection.6.2}
+>>>>>>> e913722... Finish
 \contentsline {section}{\numberline {7}Dokumentation}{9}{section.7}
 \contentsline {subsection}{\numberline {7.1}Projektdokumentation}{9}{subsection.7.1}
 \contentsline {subsection}{\numberline {7.2}Entwickerdokumentation}{9}{subsection.7.2}
 \contentsline {section}{\numberline {8}Endstand}{9}{section.8}
 \contentsline {subsection}{\numberline {8.1}Ist/Soll-Zustand}{9}{subsection.8.1}
+<<<<<<< HEAD
 \contentsline {subsubsection}{\numberline {8.1.1}Geschwindigkeit}{9}{subsubsection.8.1.1}
+=======
+\contentsline {subsubsection}{\numberline {8.1.1}Geschwindigkeit}{10}{subsubsection.8.1.1}
+>>>>>>> e913722... Finish
 \contentsline {subsubsection}{\numberline {8.1.2}Layout}{10}{subsubsection.8.1.2}
 \contentsline {subsubsection}{\numberline {8.1.3}SPA}{10}{subsubsection.8.1.3}
 \contentsline {subsubsection}{\numberline {8.1.4}SSR}{10}{subsubsection.8.1.4}
@@ -48,11 +56,20 @@
 \contentsline {subsection}{\numberline {A.1}Tabellen}{12}{subsection.1.A.1}
 \contentsline {subsubsection}{\numberline {A.1.1}Detaillierte \IeC {\"U}bersicht der Aufgaben}{12}{subsubsection.1.A.1.1}
 \contentsline {subsubsection}{\numberline {A.1.2}Zeitplan}{13}{subsubsection.1.A.1.2}
+<<<<<<< HEAD
 \contentsline {subsection}{\numberline {A.2}Grafiken}{14}{subsection.1.A.2}
 \contentsline {subsubsection}{\numberline {A.2.1}Aufbau der Seite}{14}{subsubsection.1.A.2.1}
 \contentsline {subsubsection}{\numberline {A.2.2}Projekt Architektur}{14}{subsubsection.1.A.2.2}
 \contentsline {subsubsection}{\numberline {A.2.3}SSR Node Entwurf}{15}{subsubsection.1.A.2.3}
 \contentsline {subsubsection}{\numberline {A.2.4}SPA Entwurf}{15}{subsubsection.1.A.2.4}
+=======
+\contentsline {subsubsection}{\numberline {A.1.3}Programme}{14}{subsubsection.1.A.1.3}
+\contentsline {subsection}{\numberline {A.2}Grafiken}{15}{subsection.1.A.2}
+\contentsline {subsubsection}{\numberline {A.2.1}Aufbau der Seite}{15}{subsubsection.1.A.2.1}
+\contentsline {subsubsection}{\numberline {A.2.2}Projekt Architektur}{15}{subsubsection.1.A.2.2}
+\contentsline {subsubsection}{\numberline {A.2.3}SSR Node Entwurf}{16}{subsubsection.1.A.2.3}
+\contentsline {subsubsection}{\numberline {A.2.4}SPA Entwurf}{16}{subsubsection.1.A.2.4}
+>>>>>>> e913722... Finish
 \contentsline {subsubsection}{\numberline {A.2.5}Website Mockup}{16}{subsubsection.1.A.2.5}
 \contentsline {subsubsection}{\numberline {A.2.6}PageSpeed Insights}{17}{subsubsection.1.A.2.6}
 \contentsline {subsubsection}{\numberline {A.2.7}Pingdom}{18}{subsubsection.1.A.2.7}

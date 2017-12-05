@@ -36,27 +36,27 @@
 \thispagestyle{empty}
 	\begin{center}
 		\begin{Large}
-		
-			
+
+
 			Für den Beruf des Fachinformatiker der Anwendungsentwicklung\\
-			
+
 		\end{Large}
 	\end{center}
- 
+
  	\begin{center}
 		\begin{LARGE}
-			 \textbf{Agentur Website}\\			 
+			 \textbf{Agentur Website}\\
 		 Ein Full-Stack Web-Developer Projekt
 		\end{LARGE}
 	\end{center}
-	
+
 	\begin{center}
-	Auszubbildner: \\ 
+	Auszubbildner: \\
  	Jeremy Seipelt\\
  	Pichelsdorferstr. 72\\
 	 13595 Berlin\\
-	\end{center}	
-	
+	\end{center}
+
 	\begin{center}
 		\includegraphics[scale=0.05]{logo_zmb}\\
  		Ausbildungsbetrieb:\\
@@ -73,6 +73,13 @@
  \acro{DOM}{Document Object Model}
  \acro{CMS}{Content Management System}
  \acro{AOT}{Ahead of time}
+ \acro{REST}{Representational State Transfer}
+ \acro{SASS}{Super Awsome Style Sheets}
+ \acro{API}{Application Programming Interface}
+ \acro{JSON}{Javascript Object Notation}
+
+
+
 \end{acronym}
 \begin{acronym}[Allgemein]
  \acro{B2B}{Business to Business}
@@ -82,15 +89,15 @@
 \setcounter{page}{1}
 \section{Vorwort}
 Diese Projektdokumentation ist für die Abschlussprüfung der IHK für den Beruf des Fachinformatikers der Anwendungsentwicklung entstanden und beschreibt Vorgehensweisen des Verfassers.\\
-Ausbildungsbetrieb ist die zmb GmbH, ein KMU mit Standort in Berlin Mitte.
-Die zmb vertreibt ihre eigen E-Commerce Plattform, genannt CORE, und geht Projektarbeiten im \acs{B2B} Bereich für alle gängigen Shopsysteme nach.  
-Dabei legt die zmb Wert darauf alle Wünsche des Kunden, von der Bereitstellung eigener API über Onboarding bis hin zu Zahlungsweisen, zu erfüllen. 
+Ausbildungsbetrieb ist die zmb GmbH, ein \acs{KMU} mit Standort in Berlin Mitte.
+Die zmb vertreibt ihre eigen E-Commerce Plattform, genannt CORE, und geht Projektarbeiten im \acs{B2B} Bereich für alle gängigen Shopsysteme nach.
+Dabei legt die zmb Wert darauf alle Wünsche des Kunden, von der Bereitstellung eigener API über Onboarding bis hin zu Zahlungsweisen, zu erfüllen.
 \subsection{Beschreibung des Projektes}
 Für die neu geplanten Agenturarbeiten der zmb, soll eine neue Internet-Präsenz aufgebaut werden.\\\\
 Die zmb wird zurzeit nur durch eine Website aus Seiten, die durch das interne CMS System gepflegt werden, präsentiert, sowie auf Partnerseiten.\\\\
-Die neue Seite wird eine \acs{SPA} um die Seite für den Kunden modern und schnell zu machen.  
+Die neue Seite wird eine \acs{SPA} um die Seite für den Kunden modern und schnell zu machen.
 Der Server muss dafür die \acs{SPA} bereits kompiliert versenden, da Suchmaschinen sich nur die gesendete HTML Datei ansehen, dafür benötigen wird ein \acs{SSR}-Setup auf dem Server.
-Dafür wird im Verlauf des Projekts ein Server gemietet sowie aufgesetzt. Und eine Website erstellt auf der potentielle Kunden mit der zmb in Kontakt treten können.  
+Dafür wird im Verlauf des Projekts ein Server gemietet sowie aufgesetzt. Und eine Website erstellt auf der potentielle Kunden mit der zmb in Kontakt treten können.
 \subsection{Ziel des Projektes}
 Am Ende des Projekts soll eine \acs{SPA} entstehen die mithilfe von \acs{SSR} auch ein Vernünftiges SEO Ranking hinbekommt. Dabei sollen namenhafte Geschwindigkeitsindexe die Seite mit maximalen Punkten bewerten.
 Die Inhalte der \acs{SPA} werden über ein selbst auf dem Server installiertes CMS-System eingetragen.
@@ -109,7 +116,7 @@ Den ersten Schritt in die Richtung der Agenturarbeit geht die zmb mit der zmb.ag
 Das Projekt beschränkt sich auf das Aufsetzen sowie implementieren einer kleineren Version der Agentur Website die schon alle technischen Voraussetzungen und ein Bruchteil des Inhaltes enthält. Deswegen wird der Großteil der Layout und CSS Arbeiten die im größeren Umfang ein Teil sind, sowie das Anlegen von Inhalten für die Seite, nicht in die Projektzeit eingerechnet.\\
 Probleme die zur Verzögerung des ganzen Projekts geführt hätten wurden aus der Projektplanung ausgenommen. (Ausführen)
 \section{Projekt-Planung}
-Das Projekt wurde auf 70h für die Anforderungen der IHK angesetzt. 
+Das Projekt wurde auf 70h für die Anforderungen der IHK angesetzt.
 \subsection{Projektverlauf}
 Ein Übersicht der Hauptphasen sind der Tabelle 1 zu entnehmen. Eine detaillierte Ansicht der Zeitplanung ist in der \ref{sec:teilaufg} auf Seite \pageref{sec:teilaufg} hinterlegt.\\
 \begin{table}[!ht]
@@ -129,24 +136,24 @@ Ein Übersicht der Hauptphasen sind der Tabelle 1 zu entnehmen. Eine detailliert
      \end{tabular}
      \caption{Übersicht der Zeitplanung}
 \label{tbl:Übersicht der Zeitplanung}
-\end{table} 
+\end{table}
 \subsection{Ressourcenplanung}
 Bei der Auswahl der Ressourcen wurde Wert auf Open Source Lösungen wert gelegt, um Projektkosten möglichst gering zu halten. Die Liste aller Benutzter Software ist unter %Todo
 zu finden.
 \subsection{Entwicklungsprozess}
-Die Entwicklung der Website wird per Wasserfall-Modell abgewickelt. Dabei werden die einzelnen Phasen des Projektverlaufs nacheinander durchlaufen. Nach jeder Phaase wird mit S. Gerodetti Rücksprache über den Stand der Dinge gehalten , J. Gerodetti übernimmt dessen Rolle in der Implementierung.\\
+Die Entwicklung der Website wird per Wasserfall-Modell abgewickelt. Dabei werden die einzelnen Phasen des Projektverlaufs nacheinander durchlaufen. Nach jeder Phase wird mit S. Gerodetti Rücksprache über den Stand der Dinge gehalten , J. Gerodetti übernimmt dessen Rolle in der Implementierung.\\
 Das Wasserfall-Modell bietet sich für kleine Software-Projekte, die einen klaren Endzustand haben, an. Da die Anforderungen schon niedergeschrieben sind, können diese in der Entwurfsphase mit einbezogen werden. \\\\
 Eine Agile Entwicklung ist somit nicht Sinnvoll, und würde nur den Aufwand erhöhen.
 \section{Analysephase}
 \subsection{Ist-Analyse}
-Die zmb ist nur als Firma für den Vertrieb und Wartung von Shop Systemen bekannt , allen voran ihr eigenes 'CORE'. Die Seite informiert nicht über die Agenturarbeit die die zmb anbietet. 
-Zu Beginn des Projektes steht nur ein gemieteter AWS Server zur Verfügung der eine minimale   Version der Linux Distribution Ubuntu als Betriebssystem benutzt. 
+Die zmb ist nur als Firma für den Vertrieb und Wartung von Shop Systemen bekannt , allen voran ihr eigenes 'CORE'. Die Seite informiert nicht über die Agenturarbeit die die zmb anbietet.
+Zu Beginn des Projektes steht nur ein gemieteter AWS Server zur Verfügung der eine minimale   Version der Linux Distribution Ubuntu als Betriebssystem benutzt.
 \subsection{Wirtschaftlichkeit}
 Aufgrund des Umstieges auf Agenturarbeit, muss auch eben diese  im Internet beworben werden. Momentan kommen Auftrage nur aus dem Partnernetzwerk und nicht auf dem direkten Weg zur zmb, deswegen ist die neue Internetpräsenz zwangsweise erforderlich.
 \subsubsection{Kosten}
 Die Ressourcenplanung besteht aus Personal und Sachkosten.\\\\
 Für das Projekt werden 3h für Beratung durch einen Senior Developer eingerechnet.\\\\
-Für die Entwicklung wird auf Open Source Lösungen gesetzt. Eine genau Liste der Verwendeten Software auf dem Server wird in Tabelle %TODO aufgelistet
+Für die Entwicklung wird auf Open Source Lösungen gesetzt. Eine genau Liste der Verwendeten Software auf dem Server wird in Tabelle \pageref{sec:progs} aufgelistet
 \begin{table}[!ht]
   \centering
      \begin{tabular}{l|r||l|r}
@@ -154,7 +161,7 @@ Für die Entwicklung wird auf Open Source Lösungen gesetzt. Eine genau Liste de
        \hline
        Entwickler      &    70*10€ = 700€    &  AWS Lightsail Server      &     5€/mtl\\
        COO    &  2*30€ = 60€               	    &  Domain & 20€/jahr\\
-       Beratung durch Seniorentwickler    &  3*30€ = 90€ & Software Lizenzen & 0€	\\ 
+       Beratung durch Seniorentwickler    &  3*30€ = 90€ & Software Lizenzen & 0€	\\
        \hline
        \hline
        Gesammt Fix& 850€ & Gesammt Monatlich & \textasciitilde 7€  \\
@@ -172,22 +179,22 @@ Somit Rechnet sich die Seite bereits nach 9h Agenturarbeit. Das entspricht 9 Kun
 \subsection{Anforderungen}
 Angefordert wurde eine neue Website.\\\\
 Diese Websie muss höchste Punktzahl in verschiedenen Tempo Benchmarks bringen, um den Besuche zu zeigen das die zmb modernste Technologien beherrscht.\\\\
-Dabei soll dem Besucher \acs{SPA} entstehen damit der Benutzer wenn er auf der Seite navigiert nicht den \acs{DOM} bei jedem Request neu berechnen muss. 
+Dabei soll dem Besucher \acs{SPA} entstehen damit der Benutzer wenn er auf der Seite navigiert nicht den \acs{DOM} bei jedem Request neu berechnen muss.
 Zur Erstellung der SPA soll Angular verwendet werden, da es sich hierbei um eine bereits im Unternehmen etabliertes Framework handelt.\\\\
 Damit Crawler etc unsere Seite vernünftig indexieren können muss die Seite bereits auf dem Server vorgerechnet werden um einen fertigen \acs{DOM} an den Crawler zu senden.
-Der Prototyp soll dem Mockup von S. Gerodetti ähneln, das Mockup ist auf Seite \pageref{tbl:Übersicht der Zeitplanung} einzusehen.\\Für den Anfang wird nur das Hero Image, sowie das Kontaktformular auf der Landingpage benötigt. 
+Der Prototyp soll dem Mockup von S. Gerodetti ähneln, das Mockup ist auf Seite \pageref{tbl:Übersicht der Zeitplanung} einzusehen.\\Für den Anfang wird nur das Hero Image, sowie das Kontaktformular auf der Landingpage benötigt.
 \subsubsection{SSR PoC}
 Zur Analyse gehörte auch der Beweis das der SSR Prozess funktioniert. Die von Angular bereitgestellte Projekt Repo\footnote{https://github.com/angular/universal-starter} konnte
 \section{Entwurfsphase}
-Die Anforderungen verlangen eine Website, dadurch ist die Wahl der Zielplattform der Webbrowser\footnote{Alle Webbrowser ab IE9}. Dabei verwenden wir soviel es geht TypeScript\footnote{https://www.typescriptlang.org/}, da es sich hierbei um eine in der Firma etablierte Sprache handelt. TypeScript wird deswegen sowohl auf Client als auch Server Ebene verwendet und vorher zu JavaScript kompiliert. 
+Die Anforderungen verlangen eine Website, dadurch ist die Wahl der Zielplattform der Webbrowser\footnote{Alle Webbrowser ab IE9}. Dabei verwenden wir soviel es geht TypeScript\footnote{https://www.typescriptlang.org/}, da es sich hierbei um eine in der Firma etablierte Sprache handelt. TypeScript wird deswegen sowohl auf Client als auch Server Ebene verwendet und vorher zu JavaScript kompiliert.
 \subsection{Server}
-Der Server ist ein, von Amazon gebuchter, Lightsail\footnote{https://amazonlightsail.com/} Server der über ein Linux OS mit Ubuntu als Distribution verfügt. Die auf Seite %TODO für den Server markierten Programmen sollen auf dem Server installiert werde.
+Der Server ist ein, von Amazon gebuchter, Lightsail\footnote{https://amazonlightsail.com/} Server der über ein Linux OS mit Ubuntu als Distribution verfügt. Die auf Seite \pageref{sec:progs} für den Server markierten Programmen sollen auf dem Server installiert werde.
 \subsubsection{CMS}
 Geplant ist ein CMS System auf dem Server (Drupal) mit Datenbank(MYSQL). Dabei soll für jede Komponente der Website, die auf Seite \pageref{sec:epage}
 referenziert werden, ein Inhaltstyp erstellt werden.\\
-Die Inhalte sollen über ein REST-Modul in Drupal dann per REST API für die SPA erreichbar sein.
-Diese Inhalte  werden in dem JSON\footnote{https://www.json.org/} Format versendet. 
-Geplant sind vorerst folgende Rest Schnittstellen:
+Die Inhalte sollen über ein REST-Modul in Drupal dann per REST \acs{API} für die SPA erreichbar sein.
+Diese Inhalte  werden in dem JSON\footnote{https://www.json.org/} Format versendet.
+Geplant sind vorerst folgende REST Schnittstellen:
 \begin{table}[!ht]
   \centering
      \begin{tabular}{l|c}
@@ -210,29 +217,29 @@ Der Server soll über HTTP/HTTPS erreichbar sein. Der Server muss unterscheiden,
        \hline
        Drupal & \textbf{/drupal}\\
        SPA/Agentur Website & \textbf{/}\\
-       SPA/Entwicklung & \textbf{/dev}\\ 
+       SPA/Entwicklung & \textbf{/dev}\\
      \end{tabular}
 \caption{Routen}
 \end{table}
 \subsubsection{Node}
 Um Javascript auf einem Server ausführen zu können, muss ein Node Server vorhanden sein.
-Der Node Server muss jede auf ihm zeigende Route abfangen und die zugehörige Route der SPA bereitstellen. Hier findet der eigentliche SSR Prozess statt, dafür muss dem Node Server die ganze SPA bereitgestellt werden. Dafür wird das Express Framework verwendet welches HTTP anfragen an den Node Server verarbeitet. Damit Node mit der SPA funktioniert muss ein AOT Compiler die Anwendung für den Server kompilieren.
+Der Node Server muss jede auf ihm zeigende Route abfangen und die zugehörige Route der SPA bereitstellen. Hier findet der eigentliche SSR Prozess statt, dafür muss dem Node Server die ganze SPA bereitgestellt werden. Dafür wird das Express Framework verwendet welches HTTP anfragen an den Node Server verarbeitet. Damit Node mit der SPA funktioniert muss ein \acs{AOT} Compiler die Anwendung für den Server kompilieren.
 \subsection{Single Page Application}
 Das Framework welches für die SPA verwendet wird ist Angular\footnote{https://angular.io}, welches die zmb seit Jahren produktiv einsetzt. Bei Angular wird der Fokus auf wiederverwendbare Komponenten gesetzt die, wie native DOM-Element, in das HTML eingebunden werden.\\\\
-Dafür wurde der generelle Seiten-Aufbau in der Grafik, auf Seite \pageref{sec:epage} 
-festgelegt. Deswegen werden Komponenten entworfen, die für einzelne Passage der Website stehen. 
-Um die Rest-API vom CMS  konsumieren zu können, benötigen wir noch ein Service\footnote{https://angular.io/guide/dependency-injection}. 
+Dafür wurde der generelle Seiten-Aufbau in der Grafik, auf Seite \pageref{sec:epage}
+festgelegt. Deswegen werden Komponenten entworfen, die für einzelne Passage der Website stehen.
+Um die Rest-API vom CMS  konsumieren zu können, benötigen wir noch ein Service\footnote{https://angular.io/guide/dependency-injection}.
 Der Entwurfsplan der SPA ist auf der Seite \pageref{sec:espa} hinterlegt.
 \section{Implementierungsphase}
 \subsection{Server}
 \subsubsection{Aufsetzen des Servers}
-Der gebuchte Lightsail Server wird nur mit einer minimalen Installation ausgeliefert. Als erstes werden die benötigten Programme installiert. Dabei werden die unter Server aufgeführten Programme über den Ubuntu Package Manager apt installiert. Für die einfache Arbeit mit dem Server wurden symbolische Links, auf wichtige Serverressourcen und Programme, in das Home Verzeichnis des Users angelegt, wie auf dem Sreenshot auf Seite \pageref{sec:ordner} .
+Der gebuchte Lightsail Server wird nur mit einer minimalen Installation ausgeliefert. Als erstes werden die benötigten Programme installiert. Dabei werden die unter Server auf Seite \pageref{sec:progs} aufgeführten Programme über den Ubuntu Package Manager apt\footnote{https://wiki.ubuntuusers.de/APT/} installiert. Für die einfache Arbeit mit dem Server wurden symbolische Links, auf wichtige Serverressourcen und Programme, in das Home Verzeichnis des Users angelegt, wie auf dem Sreenshot auf Seite \pageref{sec:ordner} .
 \subsubsection{NGINX}
 Der HTTPS Teil des Servers wird von NGINX gesteuert. Nach der Installation des NGINX, muss der NGINX Service gestartet werden. Sobald der NGINX läuft kann der Server konfiguriert werden. Da Drupal und Node auf dem selben Server liegen müssen für beide unterschiedliche Routen in der Konfiguration angelegt werden wie auf Seite \pageref{sec:nginx}. Die komplette NGINX Konfiguration ist im Extra Source Code Anhang vorzufinden.
 \subsubsection{CMS}
 Nach dem Download von Drupal und der einrichtung von MySQL, wird Drupal über einen Aufruf im Webbrowser installiert. Die benötigten Module wurden eingespielt und die Inhaltstypen angelegt.
 Die Inhaltstypen mit ihren Feldern sind auf Seite \pageref{sec:content} ff. zu sehen.
-Die REST Schnittstelle ist über das REST UI Modul von Drupal erstellt worden, ein Screenshot der erstellten Schnittstellen ist auf Seite \pageref{sec:rest} zu sehen.
+Die REST Schnittstelle ist über das REST \acs{UI} Modul von Drupal erstellt worden, ein Screenshot der erstellten Schnittstellen ist auf Seite \pageref{sec:rest} zu sehen.
 \subsubsection{Node}
 Neben Node wurde noch PM2\footnote{http://pm2.keymetrics.io/} installiert um den Node Prozess bei Abstürzen automatisch neu zu starten. Die Installation von Pm2 sowie aller von der SPA benötigten Pakete erfolgt über den Node Package Manager. Dieser installiert automatisch alle Pakete die als Abhängigkeit  in der \textit{package.json} angegeben wurden.\\ Der Inhalt der package.json ist dem Source Code zu entnehmen.
 \subsection{SPA}
@@ -246,9 +253,9 @@ Die Einstellungen Gulps sind im Source Code hinterlegt.
 \section{Abschlussphase}
 In folgenden werden die abschließenden Arbeiten beschrieben die den pagespeed und die responsiveness der SPA behandeln.
 \subsection{Pagespeed}
-Um den maximalen Pagespeed zu erreichen musste auf dem Server beim NGINX der Cache, sowie gzip um gesendete Dateien vorher zu komprimieren, aktiviert werden.\\ Die Performanz des Audits konnte aufgrund der Limitierungen der benutzen Pakete/Libraries/Frameworks nur auf 69/100(zufriedenstellend) erhöht werden. 
+Um den maximalen Pagespeed zu erreichen musste auf dem Server beim NGINX der Cache, sowie gzip um gesendete Dateien vorher zu komprimieren, aktiviert werden.\\ Die Performanz des Audits konnte aufgrund der Limitierungen der benutzen Pakete/Libraries/Frameworks nur auf 69/100(zufriedenstellend) erhöht werden.
 \subsection{Responsiveness}
-Die Responsiveness der Website sollte durch die Verwendung von relativen Größen sichergestellt werden. Diese Annahme erwies sich jedoch als Falsch, denn was auf einem großem Bildschirm groß ist ist dann auf einem kleinen Bildschirm klein. Deswegen wurde um die Werte adjustieren zu können dem SASS feste Breiten, für verschiedene Endgeräte, als Variablen angelegt.\\Die einzelnen Komponenten wurden dann auf Handy/Laptop/Computergröße fein justiert.  
+Die Responsiveness der Website sollte durch die Verwendung von relativen Größen sichergestellt werden. Diese Annahme erwies sich jedoch als Falsch, denn was auf einem großem Bildschirm groß ist ist dann auf einem kleinen Bildschirm klein. Deswegen wurde um die Werte adjustieren zu können dem \acs{SASS} feste Breiten, für verschiedene Endgeräte, als Variablen angelegt.\\Die einzelnen Komponenten wurden dann auf Handy/Laptop/Computergröße fein justiert.
 \section{Dokumentation}
 Die Dokumentation besteht aus zwei Teilen einer Projektdokumentation und einer Entwickler Dokumentation.
 \subsection{Projektdokumentation}
@@ -273,11 +280,11 @@ Die geschriebene SPA ist in der Lage die Seite in gewünschter Form anzuzeigen. 
 \subsubsection{SSR}
 Das serverseitige Rendern funktioniert, jedoch entsteht ein Flackern wenn der Serverseitige DOM, durch den Angular Bootstrapping auf dem Client, verworfen wird. Zwar wurde das Preboot Modul nicht in den Anforderungen aufgelistet jedoch sollte es innerhalb der Projektzeit implementiert werden um den zuvor genannten Fehler zu beheben.
 \subsubsection{CMS}
-Das \acs{CMS} Drupal ist auf dem Server installiert und ist über eine eigene URL auf der Domain der Agenturseite freigeschaltet. Inhalte werden bereits für die Seite erstellt und gepflegt, alle Inhalte aus dem Layout wurden über Drupal eingestellt. Die Möglichkeit auch das CSS zu editieren existiert aus dem CMS heraus noch nicht. 
+Das \acs{CMS} Drupal ist auf dem Server installiert und ist über eine eigene URL auf der Domain der Agenturseite freigeschaltet. Inhalte werden bereits für die Seite erstellt und gepflegt, alle Inhalte aus dem Layout wurden über Drupal eingestellt. Die Möglichkeit auch das CSS zu editieren existiert aus dem CMS heraus noch nicht.
 \subsection{Quo Vadis ?}
 Nach Abschluss ist noch eine Menge für die Seite zu tun.
 Das CMS  ist zwar vorhanden besitzt aber kaum Einträge oder Übersetzungen in andere Sprachen.
-Somit muss noch ein Übersetzung Service in Angular gebaut und Inhalte erstellt werden. Das Bootstraping der SPA verwirft den DOM zurzeit, deswegen ist der Einbau des "Preboot" Moduls grade an oberster Priorität. Geplant ist auch das verwenden von Service Workers\footnote{https://developers.google.com/web/fundamentals/primers/service-workers/} wie Google Amp\footnote{https://www.ampproject.org/}. 
+Somit muss noch ein Übersetzung Service in Angular gebaut und Inhalte erstellt werden. Das Bootstraping der SPA verwirft den DOM zurzeit, deswegen ist der Einbau des "Preboot" Moduls grade an oberster Priorität. Geplant ist auch das verwenden von Service Workers\footnote{https://developers.google.com/web/fundamentals/primers/service-workers/} wie Google Amp\footnote{https://www.ampproject.org/}.
 \subsection{Fazit für zukünftige Projekte}
 Das benutzen einer AOT kompilierten Angular Application für serverseitiges Rendering ist noch eine relativ neue Technologie und ist deshalb noch nicht gut Dokumentiert. Es gibt kaum Best Practices oder Tutorials , und wenn man Pech hat ist der Fehler der grade auf dem Bildschirm angezeigt wird der erste seiner Art. Für die Zukunft sollte man für dringende einsatzfähige Software auf etablierte und getestete Systeme setzen um nicht vor einer Sackgasse zu Enden. Beim nächsten Projekt sollte der etablierte Teil stärker sein als der "neue" Technologie Teil um keine hohe Zeiten bei der Fehlersuche  zu verschwenden.
 \begin{appendices}
@@ -285,6 +292,7 @@ Das benutzen einer AOT kompilierten Angular Application für serverseitiges Rend
 \begin{landscape}
 \includepdf[scale=1,pages=1,landscape=true,pagecommand=\subsubsection{Zeitplan}\label{sec:time}]{Zeitplan}
 \end{landscape}
+\includepdf[scale=0.8,pages=1,pagecommand=\subsubsection{Programme}\label{sec:progs}]{programme}
 \subsection{Grafiken}
 \subsubsection{Aufbau der Seite}
 \label{sec:epage}
@@ -300,8 +308,8 @@ Das benutzen einer AOT kompilierten Angular Application für serverseitiges Rend
 \includegraphics[scale=0.7]{SSA}
 \subsubsection{Website Mockup}
 \centering
-\includegraphics[trim={0 10cm 0 0},height=20cm,clip]{Vorlage}
-\caption{https://goo.gl/qfjDmC}
+Aufgrund der Größenlimitierung der PDF muss das Bild im Webbrowser Aufgerufen werden.\\
+https://goo.gl/qfjDmC
 \flushleft
 \includepdf[scale=0.8,pages=1,pagecommand=\subsubsection{PageSpeed Insights}\label{sec:google}]{pagespeed}
 \includepdf[scale=0.8,pages=1,pagecommand=\subsubsection{Pingdom}\label{sec:pingdom}]{pingdom}
@@ -343,7 +351,7 @@ location  / {
         proxy_set_header Host $host;
         proxy_cache_bypass $http_upgrade;
     }
-    
+
 location /drupal/ {
         index index.php;
         root /data/www/drupal;
