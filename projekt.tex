@@ -87,34 +87,34 @@
  \acro{KMU}{Kleines Mittelständisches Unternehmen}
 \end{acronym}
 \newpage
+\pagenumbering{arabic}
 \setcounter{page}{1}
 \section{Vorwort}
 Diese Projektdokumentation ist für die Abschlussprüfung der IHK für den Beruf des Fachinformatikers der Anwendungsentwicklung entstanden und beschreibt Vorgehensweisen des Verfassers.\\
 Ausbildungsbetrieb ist die zmb GmbH, ein \acs{KMU} mit Standort in Berlin Mitte.
-Die zmb vertreibt ihre eigen E-Commerce Plattform, genannt CORE, und geht Projektarbeiten im \acs{B2B} Bereich für alle gängigen Shopsysteme nach.
-Dabei legt die zmb Wert darauf alle Wünsche des Kunden, von der Bereitstellung eigener API über Onboarding bis hin zu Zahlungsweisen, zu erfüllen.
+Die zmb vertreibt, supportet, und entwickelt ihre eigene E-Commerce Plattform, genannt CORE, und geht Projektarbeiten im \acs{B2B} Bereich für alle gängigen Shopsysteme nach.
+Dabei legt die zmb Wert darauf alle Wünsche des Kunden, von der Bereitstellung eigener API über Onboarding bis hin zu Zahlungsweisen, zu erfüllen. Dem Kunden werden auch individuelle Lösungen angeboten.
 \subsection{Beschreibung des Projektes}
-Für die neu geplanten Agenturarbeiten der zmb, soll eine neue Internet-Präsenz aufgebaut werden.\\\\
-Die zmb wird zurzeit durch eine Website aus Seiten, die durch das interne CMS System gepflegt werden, präsentiert.\\\\
+Für die Agenturarbeiten der zmb, soll eine neue Internet-Präsenz aufgebaut werden.\\\\\\
 Die neue Seite wird eine \acs{SPA} um die Seite für den Kunden modern und schnell zu machen.
 Der Server muss dafür die \acs{SPA} bereits kompiliert versenden, da Suchmaschinen sich nur die gesendete HTML Datei ansehen. wird ein \acs{SSR}-Setup auf dem Server benötigt.
 Im Verlaufe des Projekts wird ein Server gemietet, aufgesetzt und eine Website erstellt auf der potentielle Kunden mit der zmb in Kontakt treten können.
 \subsection{Ziel des Projektes}
-Am Ende des Projekts soll eine \acs{SPA} entstehen die mithilfe von \acs{SSR} auch ein hohes SEO Ranking hinbekommt. Dabei sollen namenhafte Geschwindigkeitsindexe die Seite mit maximalen Punkten bewerten.
+Am Ende des Projekts soll eine \acs{SPA} entstehen die mithilfe von \acs{SSR} auch ein hohes SEO Ranking erreicht wird. Dabei sollen namenhafte Geschwindigkeitsindexe die Seite mit maximalen Punkten bewerten.
 Die Inhalte der \acs{SPA} werden über ein selbst auf dem Server installiertes CMS-System eingetragen.
 Am Ende entsteht eine Website die auch ohne Hilfe von HTML sowie JS und CSS gepflegt werden kann.
 \subsection{Umfeld des Projektes}
 Das Projekt wurde vom COO Simeon Gerodetti beantragt.\\
 Herr Simeon Gerodetti ist in der zmb für das operative Geschäft, für das Marketing und den Online-Auftritt der zmb zuständig.
-Des weiteren kümmert er sich um die Partner im \acs{B2B} Bereich, sorgt für Kundenaufträge und das Rechnungswesen des Unternehmens.\\\\
+Des weiteren kümmert er sich um die Partner im \acs{B2B} Bereich, sorgt für Kundenaufträge des Unternehmens.\\\\
 Jovan Gerodetti ist der Softwareentwickler für Frontend, sowie der Spezialist in Angular. Er baut neue UIs, Schnittstellen für CORE und stellt eine Beratende Funktion für das Projekt dar.\\\\
 Für das Projekt sind die Zuständigkeiten wie folgt:\\
 - Simeon Gerodetti für Design\\
 - Jovan Gerodett für Implementierung\\\\
-- die Abnahme des Projektes wird von Simeon Gerodettivollzogen.
+- die Abnahme des Projektes wird von Simeon Gerodetti vollzogen.
 \subsection{Projektentscheidung}
-Das Hauptgeschäft besteht aus dem Verkauf und der Entwicklung der Inhouse E-Commerce Lösung 'CORE', welche von 3 Personen gewartet wird. 'Core' wird bisher nur als SaaS Lösung eingesetzt und deshalb liegt der administrative Aufwand bei der zmb. Deswegen wird geplant von der eigenen Lösung wegzugehen und den Kunden, für bereits vorhandene Shopsysteme, Lösungen anzubieten.\\\\
-Den ersten Schritt in die Richtung der Agenturarbeit geht die zmb mit der zmb.agency Website, dessen Unterbau durch dieses Projekt entsteht.
+Das Hauptgeschäft besteht aus dem Verkauf und der Entwicklung der Inhouse E-Commerce Lösung 'CORE', welche von 3 Personen gewartet wird. 'Core' wird bisher nur als SaaS Lösung eingesetzt und deshalb liegt der administrative Aufwand bei der zmb.\\\\
+Den weiteren Schritt in die Richtung der Agenturarbeit geht die zmb mit der zmb.agency Website, dessen Unterbau durch dieses Projekt entsteht.
 \subsection{Beschränkungen des Projektes}
 Das Projekt beschränkt sich auf das Aufsetzen, sowie das Implementieren einer kleineren Version der Agentur Website, die schon alle technischen Voraussetzungen und ein Bruchteil des Inhaltes enthält. Deswegen wird der Großteil der Layout und CSS Arbeiten, die im größeren Umfang ein Teil sind, das Anlegen von Inhalten für die Seite nicht in die Projektzeit eingerechnet.
 \section{Projekt-Planung}
@@ -140,7 +140,7 @@ Ein Übersicht der Hauptphasen sind der Tabelle 1 zu entnehmen. Eine detailliert
 \label{tbl:Übersicht der Zeitplanung}
 \end{table}
 \subsection{Ressourcenplanung}
-Bei der Auswahl der Ressourcen wurde Wert auf Open Source Lösungen gelegt, um Projektkosten möglichst gering zu halten. Die Liste der benutzten Software ist unter Seite \pageref{sec:progs}
+Bei der Auswahl der Ressourcen wurde Wert auf Open Source Lösungen gelegt, um Projektkosten möglichst gering zu halten. Die Liste der benutzten Software ist aufSeite \pageref{sec:progs}
 zu finden.
 \subsection{Entwicklungsprozess}
 Die Entwicklung der Website wird per Wasserfall-Modell abgewickelt. Dabei werden die einzelnen Phasen des Projektverlaufs nacheinander durchlaufen. Nach jeder Phase wird mit Simeon Gerodetti Rücksprache über den Stand der Dinge gehalten, Jovan Gerodetti übernimmt dessen Rolle in der Implementierung.\\
@@ -287,7 +287,7 @@ Die Möglichkeit auch das CSS zu editieren existiert aus dem CMS heraus noch nic
 \subsection{Quo Vadis ?}
 Nach Abschluss ist noch eine Menge für die Seite zu tun.
 Das CMS ist zwar vorhanden, besitzt aber kaum Einträge oder Übersetzungen in andere Sprachen.
-Somit muss noch ein Übersetzung Service in Angular gebaut und Inhalte erstellt werden. Das Bootstraping der SPA verwirft den DOM zurzeit, deswegen ist der Einbau des "Preboot" Moduls gerade an oberster Priorität. Geplant ist auch das Verwenden von Service Workers\footnote{https://developers.google.com/web/fundamentals/primers/service-workers/} wie Google Amp\footnote{https://www.ampproject.org/}.
+Somit muss noch ein Übersetzung Service in Angular gebaut und Inhalte erstellt werden. Das Bootstraping der SPA verwirft den DOM zurzeit, deswegen ist der Einbau des "Preboot" Moduls gerade an oberster Priorität. Geplant ist auch das Verwenden von Service Workers\footnote{https://developers.google.com/web/fundamentals/primers/service-workers/}. Eine Version der Seite soll Google Amp\footnote{https://www.ampproject.org/} unterstützen.
 \subsection{Fazit für zukünftige Projekte}
 Das Benutzen einer AOT kompilierten Angular Application für serverseitiges Rendering ist noch eine relativ neue Technologie und ist deshalb noch nicht gut Dokumentiert. Es gibt kaum Best Practices oder Tutorials. Wenn man Pech hat ist der Fehler der gerade auf dem Bildschirm angezeigt wird, der erste seiner Art.\\ Für die Zukunft sollte man für dringende einsatzfähige Software auf etablierte und getestete Systeme setzen, um nicht vor einer Sackgasse zu Enden. Beim nächsten Projekt sollte der etablierte Teil stärker sein, als der neue Technologie Teil, um keine hohe Zeiten bei der Fehlersuche zu verschwenden.
 \begin{appendices}
